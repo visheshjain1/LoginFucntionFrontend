@@ -28,7 +28,7 @@ export const Register = (props) => {
                     window.alert(data.message);
                     setShowOtpInput(true);
                 } else {
-                    console.log("Error:", data.message);
+                    window.alert("Email Already In Use");
                 }
             })
             .catch((error) => {
@@ -82,7 +82,7 @@ export const Register = (props) => {
                         name="email"
                         required
                     />
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password">New Password</label>
                     <input
                         value={pass}
                         onChange={(e) => setPass(e.target.value)}
